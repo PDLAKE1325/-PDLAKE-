@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -23,5 +24,5 @@ async def on_mamber_join(member):
             break
     await client.add_roles(member, role)
 
-
-client.run("NzM2NDA2NTE3OTUxMjM0MDc4.XxuWAw.Gwm27xOiznCfBkxg5bNeIOpKs40")
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
